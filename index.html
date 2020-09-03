@@ -131,7 +131,39 @@ img {
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
 
 .topnav .login-container {
   float: right;
@@ -197,20 +229,6 @@ img {
   <p>Navigation menu</p>
   <p></p>
 </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<body>
-
-
-<form action="https://mondomunchies.github.io/CheckoutForm/">
-
-  <input type="image" src="data:image/png;base64,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" alt="Submit" width="48" height="48">
-</form>
-
-
 
 </body>
 </html>
